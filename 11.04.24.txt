@@ -1,0 +1,59 @@
+import java.util.Scanner;
+public class HW_110424 {
+    public static void main(String[] args) {
+        //   Условие здачи: ввести 2 слова, состоящие из четного числа букв. Получить слово
+        //   состоящее из первой половины первого слова и второй половины второго слова.
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Введите первое слово");
+//        String firstWord = scanner.nextLine();
+//        System.out.println("Введите вторрое слово");
+//        String secondWord = scanner.nextLine();
+//
+//        int halfLength = firstWord.length() / 2;
+//        String firstHalf = firstWord.substring(0, halfLength);
+//        String secondHalf = secondWord.substring(halfLength);
+//
+//        String newWord = firstHalf + secondHalf;
+//
+//        System.out.println("Новое слово: " + newWord);
+
+        //  Создайте методы с математическими операциями +, -, *, /
+        //  Каждый метод принимает два числа в параметрах и возвращает результат
+        //  Вызовите все методы в main
+        //  Результат распечатайте в консоль
+
+//        Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Введите первое число:");
+//        double num1 = scanner.nextDouble();
+//        System.out.println("Введите второе число:");
+//        double num2 = scanner.nextDouble();
+//        System.out.println("Введите жедаемое действие:");
+//        char decision = scanner.next().charAt(0);
+//
+//        if (decision == '+'){
+//            System.out.println(num1 + num2);
+//        }
+//        if (decision == '-'){
+//            System.out.println(num1 - num2);
+//        }
+//        if (decision == '*'){
+//            System.out.println(num1 * num2);
+//        }
+//        if (decision == '/'){
+//            System.out.println(num1 / num2);
+//        }
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Здравствуйте, введите ваше имя!");
+        String name = scanner.nextLine();
+//        int letters = countLetters(name);
+        System.out.println("Доброго времени суток " + name);
+        System.out.println("Ваше имя начинается на букву " + name.charAt(0) + " и заканчивается на букву "
+                + name.charAt(name.length()-1) + "!");
+        System.out.println("Колличество букв в вашем имени = " + name.length());
+    }
+}
