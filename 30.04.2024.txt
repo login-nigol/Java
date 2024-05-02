@@ -1,0 +1,47 @@
+1 уровень сложности: Напишите программу, которая принимает команды управления
+персонажем в текстовой игре (up, down, right, left).
+Используйте switch-case для обработки команд и
+изменения положения персонажа на карте или вывода сообщений о локации персонажа.
+На команду loc должны выводиться текущие координаты.
+Изначально начинаем в точке с координатами 0,0
+
+public class GameHW300424 {
+    //дамашнее задание 30.04.2024
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String command;
+        int x = 0;
+        int y = 0;
+        System.out.println("Добро пожаловать в игру!");
+        while (true){
+            System.out.println("Введите команду: up, down, right, left, loc, exit");
+            command = scanner.nextLine();
+            switch (command){
+                case "up":
+                    y++;
+                    System.out.println("Перемещение вверх. Текущее положение: (" + x + ", " + y + ")");
+                    break;
+                case "down":
+                    y--;
+                    System.out.println("Перемещение вниз. Текущее положение: (" + x + ", " + y + ")");
+                    break;
+                case "right":
+                    x++;
+                    System.out.println("Перемещение вправо. Текущее положение: (" + x + ", " + y + ")");
+                    break;
+                case "left":
+                    x--;
+                    System.out.println("Перемещение влево. Текущее положение: (" + x + ", " + y + ")");
+                    break;
+                case "loc":
+                    System.out.println("Текущее положение: (" + x + ", " + y + ")");
+                    break;
+                case "exit":
+                    System.out.println("Игра закончена! Благодарим за участие.");
+                    return;
+                default:
+                    System.out.println("Неверная команда! Попробуйте снова.");
+            }
+        }
+    }
+}
